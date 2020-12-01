@@ -24,16 +24,10 @@ public class BoardManager : MonoBehaviour
     public static char[,] gameBoard = new char[36, 36];
     private int columns = 36;
     private int rows = 36;
-    public GameObject exit;
-    public GameObject roomExit;
-    public GameObject[] floorTiles;
-    public GameObject[] wallTiles;
-    public GameObject[] foodTiles;
+    public GameObject floorTile;
     public GameObject[] enemyTiles;
     public GameObject[] outerWallTiles;
     public GameObject populateGrass;
-    public GameObject key;
-    public GameObject door;
     public GameObject player;
 
     private Transform boardHolder;
@@ -98,54 +92,8 @@ public class BoardManager : MonoBehaviour
         {
             for (int y = 0; y < rows; y++)
             {
-                GameObject toInstantiate = floorTiles[Random.Range(0, floorTiles.Length)];
+                GameObject toInstantiate = floorTile;
                 GameObject instance = Instantiate(toInstantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
-                instance.transform.SetParent(boardHolder);
-
-                if(x == 3 && y == 3)
-                {
-                    toInstantiate = populateGrass;
-                }
-                //if (gameBoard[y, x] == 'X')
-                //{
-                //    toInstantiate = outerWallTiles[Random.Range(0, outerWallTiles.Length)];
-                //} else if(gameBoard[y, x] == 'I')
-                //{
-                //    toInstantiate = wallTiles[Random.Range(0, wallTiles.Length)];
-                //} else if (gameBoard[y, x] == 'O')
-                //{
-                //    toInstantiate = roomExit;
-                //} else if (gameBoard[y, x] == 'E')
-                //{
-                //    toInstantiate = exit;
-                //}
-                //else if (gameBoard[y, x] == 'F')
-                //{
-                //    toInstantiate = foodTiles[Random.Range(0, foodTiles.Length)];
-                //}
-                //else if (gameBoard[y, x] == '1')
-                //{
-                //    toInstantiate = enemyTiles[0];
-                //}
-                //else if (gameBoard[y, x] == '2')
-                //{
-                //    toInstantiate = enemyTiles[1];
-                //}
-                //else if (gameBoard[y, x] == '3')
-                //{
-                //    toInstantiate = enemyTiles[2];
-                //}
-                //else if (gameBoard[y, x] == 'K')
-                //{
-                //    toInstantiate = key;
-                //}
-                //else if (gameBoard[y, x] == 'L')
-                //{
-                //    toInstantiate = door;
-                //}
-
-
-                instance = Instantiate(toInstantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
                 instance.transform.SetParent(boardHolder);
 
             }
