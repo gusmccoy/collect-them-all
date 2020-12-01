@@ -1,0 +1,1591 @@
+fileFormatVersion: 2
+guid: bca9ebe29435bcb45b58eb64c352405b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5034554400465368889
+    second: Scavengers_SpriteSheet2_0
+  - first:
+      213: -9100122631380433591
+    second: Scavengers_SpriteSheet2_1
+  - first:
+      213: -9146963634529039881
+    second: Scavengers_SpriteSheet2_2
+  - first:
+      213: 5831342370205118574
+    second: Scavengers_SpriteSheet2_3
+  - first:
+      213: -6775643970552420795
+    second: Scavengers_SpriteSheet2_4
+  - first:
+      213: 8439975071403692014
+    second: Scavengers_SpriteSheet2_5
+  - first:
+      213: -3403242825209704754
+    second: Scavengers_SpriteSheet2_6
+  - first:
+      213: 2894085663206932712
+    second: Scavengers_SpriteSheet2_7
+  - first:
+      213: 1032927392184723685
+    second: Scavengers_SpriteSheet2_8
+  - first:
+      213: -5878870690165970910
+    second: Scavengers_SpriteSheet2_9
+  - first:
+      213: -7846963882767177741
+    second: Scavengers_SpriteSheet2_10
+  - first:
+      213: -7695098692271764836
+    second: Scavengers_SpriteSheet2_11
+  - first:
+      213: -7876067838311268835
+    second: Scavengers_SpriteSheet2_12
+  - first:
+      213: 7109427076983688409
+    second: Scavengers_SpriteSheet2_13
+  - first:
+      213: -5798637857298496975
+    second: Scavengers_SpriteSheet2_14
+  - first:
+      213: 5491375128837176350
+    second: Scavengers_SpriteSheet2_15
+  - first:
+      213: -4371336702437515465
+    second: Scavengers_SpriteSheet2_16
+  - first:
+      213: -2534864158910592432
+    second: Scavengers_SpriteSheet2_17
+  - first:
+      213: 6019622728668884945
+    second: Scavengers_SpriteSheet2_18
+  - first:
+      213: 341041177754293559
+    second: Scavengers_SpriteSheet2_19
+  - first:
+      213: -5038874699476177221
+    second: Scavengers_SpriteSheet2_20
+  - first:
+      213: 3441133136623150791
+    second: Scavengers_SpriteSheet2_21
+  - first:
+      213: 7566785064489601769
+    second: Scavengers_SpriteSheet2_22
+  - first:
+      213: 6249965958049573570
+    second: Scavengers_SpriteSheet2_23
+  - first:
+      213: 1692530315909144315
+    second: Scavengers_SpriteSheet2_24
+  - first:
+      213: -262853574936817168
+    second: Scavengers_SpriteSheet2_25
+  - first:
+      213: -1533510111409061879
+    second: Scavengers_SpriteSheet2_26
+  - first:
+      213: -2536442645404297903
+    second: Scavengers_SpriteSheet2_27
+  - first:
+      213: -7695712572574833436
+    second: Scavengers_SpriteSheet2_28
+  - first:
+      213: 9105266547376901018
+    second: Scavengers_SpriteSheet2_29
+  - first:
+      213: -6428739604794452806
+    second: Scavengers_SpriteSheet2_30
+  - first:
+      213: 5415767010047839454
+    second: Scavengers_SpriteSheet2_31
+  - first:
+      213: -4602335478679091113
+    second: Scavengers_SpriteSheet2_32
+  - first:
+      213: -629744994217584419
+    second: Scavengers_SpriteSheet2_33
+  - first:
+      213: -3644593263116880051
+    second: Scavengers_SpriteSheet2_34
+  - first:
+      213: -2990449912117715658
+    second: Scavengers_SpriteSheet2_35
+  - first:
+      213: -8776625129664987880
+    second: Scavengers_SpriteSheet2_36
+  - first:
+      213: 6367921552485547406
+    second: Scavengers_SpriteSheet2_37
+  - first:
+      213: 4601139119481510822
+    second: Scavengers_SpriteSheet2_38
+  - first:
+      213: -3101205593810028232
+    second: Scavengers_SpriteSheet2_39
+  - first:
+      213: -6062397932473354167
+    second: Scavengers_SpriteSheet2_40
+  - first:
+      213: -4678059967275317700
+    second: Scavengers_SpriteSheet2_41
+  - first:
+      213: -3966205925783205322
+    second: Scavengers_SpriteSheet2_42
+  - first:
+      213: 687989852151494714
+    second: Scavengers_SpriteSheet2_43
+  - first:
+      213: -2619321278502360439
+    second: Scavengers_SpriteSheet2_44
+  - first:
+      213: -5634985636605169017
+    second: Scavengers_SpriteSheet2_45
+  - first:
+      213: -1351285570127026714
+    second: Scavengers_SpriteSheet2_46
+  - first:
+      213: -1782805749180138834
+    second: Scavengers_SpriteSheet2_47
+  - first:
+      213: -5164871572984625901
+    second: Scavengers_SpriteSheet2_48
+  - first:
+      213: -925168248299522966
+    second: Scavengers_SpriteSheet2_49
+  - first:
+      213: 3694170114124917831
+    second: Scavengers_SpriteSheet2_50
+  - first:
+      213: 2050720139223162828
+    second: Scavengers_SpriteSheet2_51
+  - first:
+      213: -5456289743490267067
+    second: Scavengers_SpriteSheet2_52
+  - first:
+      213: -6614282772319254820
+    second: Scavengers_SpriteSheet2_53
+  - first:
+      213: 3302904924078318666
+    second: Scavengers_SpriteSheet2_54
+  - first:
+      213: 1292192375745165174
+    second: Scavengers_SpriteSheet2_0
+  - first:
+      213: -5029751278298117716
+    second: Scavengers_SpriteSheet2_1
+  - first:
+      213: -335885462516012607
+    second: Scavengers_SpriteSheet2_2
+  - first:
+      213: 7265132631884684567
+    second: Scavengers_SpriteSheet2_3
+  - first:
+      213: 1087019180343614209
+    second: Scavengers_SpriteSheet2_4
+  - first:
+      213: -142322240748468524
+    second: Scavengers_SpriteSheet2_5
+  - first:
+      213: -4616043674855124522
+    second: Scavengers_SpriteSheet2_6
+  - first:
+      213: 2808126916608349742
+    second: Scavengers_SpriteSheet2_7
+  - first:
+      213: 8798953893638554218
+    second: Scavengers_SpriteSheet2_8
+  - first:
+      213: -321313770799672030
+    second: Scavengers_SpriteSheet2_9
+  - first:
+      213: -6346705818718132834
+    second: Scavengers_SpriteSheet2_10
+  - first:
+      213: -8613541229805156255
+    second: Scavengers_SpriteSheet2_11
+  - first:
+      213: 7611072919321154089
+    second: Scavengers_SpriteSheet2_12
+  - first:
+      213: 7611716780359619458
+    second: Scavengers_SpriteSheet2_13
+  - first:
+      213: 605507189968094976
+    second: Scavengers_SpriteSheet2_14
+  - first:
+      213: 8508961804428899955
+    second: Scavengers_SpriteSheet2_15
+  - first:
+      213: -5922054913435440832
+    second: Scavengers_SpriteSheet2_16
+  - first:
+      213: -5558423579056398647
+    second: Scavengers_SpriteSheet2_17
+  - first:
+      213: -7213148121325816855
+    second: Scavengers_SpriteSheet2_18
+  - first:
+      213: 6186546818429952497
+    second: Scavengers_SpriteSheet2_19
+  - first:
+      213: 8766495202605288797
+    second: Scavengers_SpriteSheet2_20
+  - first:
+      213: -2486323606304932204
+    second: Scavengers_SpriteSheet2_21
+  - first:
+      213: -408620836373391558
+    second: Scavengers_SpriteSheet2_22
+  - first:
+      213: 6135552681061885530
+    second: Scavengers_SpriteSheet2_23
+  - first:
+      213: 3241965597518969398
+    second: Scavengers_SpriteSheet2_24
+  - first:
+      213: -4896033732955917655
+    second: Scavengers_SpriteSheet2_25
+  - first:
+      213: 5090812297044639826
+    second: Scavengers_SpriteSheet2_26
+  - first:
+      213: 2567014497802956736
+    second: Scavengers_SpriteSheet2_27
+  - first:
+      213: 2598207935160768666
+    second: Scavengers_SpriteSheet2_28
+  - first:
+      213: 3074569884331754976
+    second: Scavengers_SpriteSheet2_29
+  - first:
+      213: -6075630213869887743
+    second: Scavengers_SpriteSheet2_30
+  - first:
+      213: 6700711970806861085
+    second: Scavengers_SpriteSheet2_31
+  - first:
+      213: -7983708708898427006
+    second: Scavengers_SpriteSheet2_32
+  - first:
+      213: 2459599918545285614
+    second: Scavengers_SpriteSheet2_33
+  - first:
+      213: 8311930797545187458
+    second: Scavengers_SpriteSheet2_34
+  - first:
+      213: -600696098267212941
+    second: Scavengers_SpriteSheet2_35
+  - first:
+      213: 311484709009366365
+    second: Scavengers_SpriteSheet2_36
+  - first:
+      213: -7465445037559322293
+    second: Scavengers_SpriteSheet2_37
+  - first:
+      213: 7461249674404765402
+    second: Scavengers_SpriteSheet2_38
+  - first:
+      213: 5301517906571743423
+    second: Scavengers_SpriteSheet2_39
+  - first:
+      213: 7575465173063191262
+    second: Scavengers_SpriteSheet2_40
+  - first:
+      213: -4167692012369684387
+    second: Scavengers_SpriteSheet2_41
+  - first:
+      213: 9091653398682917368
+    second: Scavengers_SpriteSheet2_42
+  - first:
+      213: 3214538192515850588
+    second: Scavengers_SpriteSheet2_43
+  - first:
+      213: -921033604236584299
+    second: Scavengers_SpriteSheet2_44
+  - first:
+      213: -8245888946681106406
+    second: Scavengers_SpriteSheet2_45
+  - first:
+      213: -2038170097910101488
+    second: Scavengers_SpriteSheet2_46
+  - first:
+      213: 4430248459561151929
+    second: Scavengers_SpriteSheet2_47
+  - first:
+      213: -1398503570955678353
+    second: Scavengers_SpriteSheet2_48
+  - first:
+      213: -1564014420672181466
+    second: Scavengers_SpriteSheet2_49
+  - first:
+      213: 1967947848499782125
+    second: Scavengers_SpriteSheet2_50
+  - first:
+      213: -3269946234186779949
+    second: Scavengers_SpriteSheet2_51
+  - first:
+      213: -5216186751330298070
+    second: Scavengers_SpriteSheet2_52
+  - first:
+      213: 3048764584616942828
+    second: Scavengers_SpriteSheet2_53
+  - first:
+      213: 8814465960248406593
+    second: Scavengers_SpriteSheet2_54
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67732c19e1acee110800000000000000
+      internalID: 1292192375745165174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca949747cdbb23ab0800000000000000
+      internalID: -5029751278298117716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c9e38193f1b65bf0800000000000000
+      internalID: -335885462516012607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71dd599e2afe2d460800000000000000
+      internalID: 7265132631884684567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10bda6c6f2ed51f00800000000000000
+      internalID: 1087019180343614209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6cc841dae560ef0800000000000000
+      internalID: -142322240748468524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d1529c0cb480ffb0800000000000000
+      internalID: -4616043674855124522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2657a47d8878f620800000000000000
+      internalID: 2808126916608349742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a62cd5982f92c1a70800000000000000
+      internalID: 8798953893638554218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2255b0ee3d67a8bf0800000000000000
+      internalID: -321313770799672030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e95a6652fa8fbe7a0800000000000000
+      internalID: -6346705818718132834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 168484353ed867880800000000000000
+      internalID: -8613541229805156255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9229bb3be76ff9960800000000000000
+      internalID: 7611072919321154089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_13
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2831738451042a960800000000000000
+      internalID: 7611716780359619458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0074ef6c491376800800000000000000
+      internalID: 605507189968094976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_15
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 376f950cda7e51670800000000000000
+      internalID: 8508961804428899955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049e250ce62a0dda0800000000000000
+      internalID: -5922054913435440832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce103364338cd2b0800000000000000
+      internalID: -5558423579056398647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e339142000c5eb90800000000000000
+      internalID: -7213148121325816855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f127dabd870bd550800000000000000
+      internalID: 6186546818429952497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d447c90f8d8a970800000000000000
+      internalID: 8766495202605288797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49eb6896addce7dd0800000000000000
+      internalID: -2486323606304932204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a371428a389445af0800000000000000
+      internalID: -408620836373391558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_23
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56a367e7acd52550800000000000000
+      internalID: 6135552681061885530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63ab726c886cdfc20800000000000000
+      internalID: 3241965597518969398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a235da924bcd0cb0800000000000000
+      internalID: -4896033732955917655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2504987dfc236a640800000000000000
+      internalID: 5090812297044639826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cfa2dac51edf9320800000000000000
+      internalID: 2567014497802956736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98dbd3e950be0420800000000000000
+      internalID: 2598207935160768666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e545b025011baa20800000000000000
+      internalID: 3074569884331754976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f97a3b2860faba0800000000000000
+      internalID: -6075630213869887743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_31
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d862a1906bdfc50800000000000000
+      internalID: 6700711970806861085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28faaef8a3b243190800000000000000
+      internalID: -7983708708898427006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_33
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee1b87a2811422220800000000000000
+      internalID: 2459599918545285614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2886f499509e95370800000000000000
+      internalID: 8311930797545187458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373d1dcc416e9a7f0800000000000000
+      internalID: -600696098267212941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_36
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d187941bd925400800000000000000
+      internalID: 311484709009366365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_37
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b49e21eba49656890800000000000000
+      internalID: -7465445037559322293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade15672c0fab8760800000000000000
+      internalID: 7461249674404765402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_39
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb0d4978276c29940800000000000000
+      internalID: 5301517906571743423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eda46c83075712960800000000000000
+      internalID: 7575465173063191262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_41
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d58d87532326926c0800000000000000
+      internalID: -4167692012369684387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_42
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f9d771b89a0c2e70800000000000000
+      internalID: 9091653398682917368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_43
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5165d964755c9c20800000000000000
+      internalID: 3214538192515850588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_44
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ad74911d4d733f0800000000000000
+      internalID: -921033604236584299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_45
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10b0cb01b7b09d80800000000000000
+      internalID: -8245888946681106406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_46
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ace3a3817f6b3e0800000000000000
+      internalID: -2038170097910101488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_47
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd2dd260876b7d30800000000000000
+      internalID: 4430248459561151929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d421c6964879ce0800000000000000
+      internalID: -1398503570955678353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_49
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62b0f30cb218b4ae0800000000000000
+      internalID: -1564014420672181466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_50
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de1e25e342e8f4b10800000000000000
+      internalID: 1967947848499782125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_51
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d2bba49931de92d0800000000000000
+      internalID: -3269946234186779949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_52
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a27dbd449c16c97b0800000000000000
+      internalID: -5216186751330298070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_53
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cec52e59c336f4a20800000000000000
+      internalID: 3048764584616942828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scavengers_SpriteSheet2_54
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 142f06df616435a70800000000000000
+      internalID: 8814465960248406593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

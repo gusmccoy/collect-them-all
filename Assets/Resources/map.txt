@@ -1,0 +1,36 @@
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X          XX    F     XX          X
+X    F     XXIIII      XX    3     X
+X          XX  2       XX  F I     X
+X          XX          XX    IIII  X
+X    III   O0          O0      I   X
+X    IIIIIIXX I        XXI         X
+X    I     XX    F     XX I  F     X
+X F  I     XX          XX          X
+X      F   XX    I I   XXI I  I  1 X
+X          XX  1 I I   XX   I I    X
+XXXXXOXXXXXXXXXXXX0XXXXXXXXXXOXXXXXX
+XXXXX0XXXXXXXXXXXXOXXXXXXXXXX0XXXXXX
+X   I      XX          XX          X
+X      F   XX     1    XX F        X
+X 2   I    XX         IXX          X
+X      I   XX    XLXI  XXI         X
+X  I     1 XX    XEXI  0O  I F     X
+X   F      XX    XXX I XXI   I     X
+X          XX    F     XX IF       X
+X       F  XX  I       XX          X
+X  I       II  I    2  XX   I3I F  X
+X   III    XX III      XX   I I    X
+XXXXXIXXXXXXXXXXXXXXXXXXXXXXX0XXXXXX
+XXXXXIXXXXXXXXXXXXXXXXXXXXXXXOXXXXXX
+X       F  XXI 1       XX       1  X
+X    2     0O  I       XX          X
+X          XXI  2      XX   F      X
+XIII       XX I        XX          X
+XIK    F   XX  I       XX          X
+XIII       XX    F     XX  I       X
+X   F   1  XX          XX I   F    X
+X          XX          XXI  I      X
+X       F  XX  F   2   0O  I       X
+X 3        XX          XXI   2     X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
