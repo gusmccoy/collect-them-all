@@ -8,28 +8,17 @@ using UnityEngine.UI;
 public class Player : MovingObject
 {
     public GameObject Camera;
-    public float restartLevelDelay = 1f;        // Delay time in seconds to restart level.
-    public int pointsPerFood = 10;              // Number of points to add to player food points when picking up a food object.
-    public int pointsPerSoda = 20;              // Number of points to add to player food points when picking up a soda object.
-    public int wallDamage = 1;                  // How much damage a player does to a wall when chopping it.
+    public float restartLevelDelay = 1f;
     public Text foodText;
     public Text scoreText;
     public AudioClip moveSound1;
-    public AudioClip moveSound2;
-    public AudioClip eatSound1;
-    public AudioClip eatSound2;
-    public AudioClip drinkSound1;
-    public AudioClip drinkSound2;
-    public AudioClip gameOverSound;
-    public AudioClip keySound;
-    public AudioClip doorSound;
-    public static bool hasKey;
+
+    public CreatureLog log;
+
     [HideInInspector] public static int score;
 
-
-
-    private Animator animator;                  // Used to store a reference to the Player's animator component.
-    private int food;                           // Used to store player food points total during level.
+    private Animator animator;
+    private int food;
 
 
     //Start overrides the Start function of MovingObject
@@ -37,6 +26,8 @@ public class Player : MovingObject
     {
         //Get a component reference to the Player's animator component
         animator = GetComponent<Animator>();
+
+        log = new CreatureLog();
 
         //Get the current food point total stored in GameManager.instance between levels.
         //food = GameManager.instance.playerFoodPoints;
@@ -127,8 +118,6 @@ public class Player : MovingObject
         //If Move returns true, meaning Player was able to move into an empty space.
         if (Move(xDir, yDir, out hit))
         {
-            //Call RandomizeSfx of SoundManager to play the move sound, passing in two audio clips to choose from.
-            SoundManager.instance.RandomizeSfx(moveSound1, moveSound2);
         }
 
         //Since the player has moved and lost food points, check if the game has ended.
@@ -146,11 +135,6 @@ public class Player : MovingObject
         //Set hitWall to equal the component passed in as a parameter.
         Wall hitWall = component as Wall;
 
-        //Call the DamageWall function of the Wall we are hitting.
-        hitWall.DamageWall(wallDamage);
-
-        //Set the attack trigger of the player's animation controller in order to play the player's attack animation.
-        animator.SetTrigger("playerChop");
     }
 
     // OnTriggerEnter2D is sent when another object enters a trigger collider attached to this object (2D physics only).
@@ -162,55 +146,6 @@ public class Player : MovingObject
             //Invoke the Restart function to start the next level with a delay of restartLevelDelay (default 1 second).
             Invoke("endGame", restartLevelDelay);
         }
-
-        //Check if the tag of the trigger collided with is Food.
-        else if (other.tag == "Food")
-        {
-            // Add pointsPerFood to the players current food total.
-            food += pointsPerFood;
-            score += (10 * pointsPerFood);
-
-            //foodText.text = "+" + pointsPerFood + " Food: " + food;
-            //scoreText.text = "+" + (10*pointsPerFood) + " Score: " + score;
-
-            SoundManager.instance.RandomizeSfx(eatSound1, eatSound2);
-
-            // Hide the food object the player collided with
-            other.gameObject.SetActive(false);
-        }
-
-        //Check if the tag of the trigger collided with is Soda.
-        else if (other.tag == "Soda")
-        {
-            //Add pointsPerSoda to players food points total
-            food += pointsPerSoda;
-            score += (10 * pointsPerSoda);
-
-            //foodText.text = "+" + pointsPerSoda + " Food: " + food;
-            //scoreText.text = "+" + (10 * pointsPerSoda) + " Score: " + score;
-
-            SoundManager.instance.RandomizeSfx(drinkSound1, drinkSound2);
-
-            //Disable the soda object the player collided with.
-            other.gameObject.SetActive(false);
-        }
-        else if (other.tag == "Key")
-        {
-            hasKey = true;
-            other.gameObject.SetActive(false);
-            SoundManager.instance.PlaySingle(keySound);
-
-            score += 500;
-            //scoreText.text = "+500 Score: " + score;
-        }
-        else if (other.tag == "LockedDoor")
-        {
-            if(hasKey)
-            {
-                other.gameObject.SetActive(false);
-                SoundManager.instance.PlaySingle(doorSound);
-            }
-        }
     }
 
 
@@ -219,15 +154,11 @@ public class Player : MovingObject
         SceneManager.LoadScene("TitleScreen");
     }
 
-    //Restart reloads the scene when called.
     private void Restart()
     {
-        //Load the last scene loaded, in this case Main, the only scene in the game.
         SceneManager.LoadScene(0);
     }
 
-    //LoseFood is called when an enemy attacks the player.
-    //It takes a parameter loss which specifies how many points to lose.
     public void LoseFood(int loss)
     {
         //Set the trigger for the player animator to transition to the playerHit animation.
