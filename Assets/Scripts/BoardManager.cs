@@ -31,6 +31,7 @@ public class BoardManager : MonoBehaviour
     public GameObject[] foodTiles;
     public GameObject[] enemyTiles;
     public GameObject[] outerWallTiles;
+    public GameObject populateGrass;
     public GameObject key;
     public GameObject door;
     public GameObject player;
@@ -101,6 +102,10 @@ public class BoardManager : MonoBehaviour
                 GameObject instance = Instantiate(toInstantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
                 instance.transform.SetParent(boardHolder);
 
+                if(x == 3 && y == 3)
+                {
+                    toInstantiate = populateGrass;
+                }
                 //if (gameBoard[y, x] == 'X')
                 //{
                 //    toInstantiate = outerWallTiles[Random.Range(0, outerWallTiles.Length)];
