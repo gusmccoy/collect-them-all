@@ -61,8 +61,6 @@ public class Player : MovingObject
     private void Update()
     {
         Camera.transform.position = transform.position + new Vector3(3.5f, 1f, -10f);
-        //If it's not the player's turn, exit the function.
-        if (!GameManager.instance.playersTurn) return;
 
         int horizontal = 0;      //Used to store the horizontal move direction.
         int vertical = 0;        //Used to store the vertical move direction.
@@ -74,15 +72,29 @@ public class Player : MovingObject
         vertical = (int) Input.GetAxisRaw("Vertical");
 
         //Check if moving horizontally, if so set vertical to zero.
-        if (horizontal != 0)
+        if (horizontal == -1)
         {
             animator.SetTrigger("playerWalkLeft");
             vertical = 0;
         }
-        if (vertical != 0)
+        else if (horizontal == 1)
+        {
+            animator.SetTrigger("playerWalkRight");
+            vertical = 0;
+        }
+        else if (vertical == -1)
         {
             animator.SetTrigger("playerWalkForward");
             horizontal = 0;
+        }
+        else if (vertical == 1)
+        {
+            animator.SetTrigger("playerWalkBackward");
+            horizontal = 0;
+        }
+        else if (vertical == 0 && horizontal == 0)
+        {
+            animator.SetTrigger("playerIdle");
         }
 
         //Check if we have a non-zero value for horizontal or vertical
