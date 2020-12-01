@@ -76,7 +76,13 @@ public class Player : MovingObject
         //Check if moving horizontally, if so set vertical to zero.
         if (horizontal != 0)
         {
+            animator.SetTrigger("playerWalkLeft");
             vertical = 0;
+        }
+        if (vertical != 0)
+        {
+            animator.SetTrigger("playerWalkForward");
+            horizontal = 0;
         }
 
         //Check if we have a non-zero value for horizontal or vertical
