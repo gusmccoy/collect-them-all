@@ -88,16 +88,16 @@ public class BoardManager : MonoBehaviour
     {
         boardHolder = new GameObject("Board").transform;
 
-        for (int x = 0; x < columns; x++)
-        {
-            for (int y = 0; y < rows; y++)
-            {
-                GameObject toInstantiate = floorTile;
-                GameObject instance = Instantiate(toInstantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
-                instance.transform.SetParent(boardHolder);
+        //for (int x = 0; x < columns; x++)
+        //{
+        //    for (int y = 0; y < rows; y++)
+        //    {
+        //        GameObject toInstantiate = floorTile;
+        //        GameObject instance = Instantiate(toInstantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
+        //        instance.transform.SetParent(boardHolder);
 
-            }
-        }
+        //    }
+        //}
     }
 
     public void SetupScene()

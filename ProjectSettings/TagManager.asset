@@ -50,6 +50,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 2183918147
+    locked: 0
   - name: Units
     uniqueID: 3070745799
     locked: 0
