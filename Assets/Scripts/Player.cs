@@ -170,8 +170,9 @@ public class Player : MovingObject
 
     private void enterBattleScene()
     {
+        var rand = new System.Random();
         SaveState.allyID = 1;
-        SaveState.enemyID = 1;
+        SaveState.enemyID = rand.Next(2);
         SaveState.playerCoordinateX = transform.position.x;
         SaveState.playerCoordinateY = transform.position.y;
         SceneManager.LoadScene("BattleScene");

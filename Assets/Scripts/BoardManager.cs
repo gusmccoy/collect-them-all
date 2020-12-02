@@ -24,7 +24,7 @@ public class BoardManager : MonoBehaviour
     public static char[,] gameBoard = new char[36, 36];
     private int columns = 36;
     private int rows = 36;
-    public static GameObject[] enemySprites;
+    public static Sprite[] enemySprites;
     public static GameObject[] allySprites;
     public GameObject populateGrass;
     public GameObject player;
