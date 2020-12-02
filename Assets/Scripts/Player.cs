@@ -75,7 +75,6 @@ public class Player : MovingObject
         {
             animator.SetTrigger("playerWalkRight");
             vertical = 0;
-            enterBattleScene();
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
@@ -149,6 +148,17 @@ public class Player : MovingObject
         {
             //Invoke the Restart function to start the next level with a delay of restartLevelDelay (default 1 second).
             Invoke("endGame", restartLevelDelay);
+        }
+        if (other.tag == "DangerArea")
+        {
+            var rand = new System.Random();
+            int chance = rand.Next(4);
+            // ONE IN FOUR CHANCE OF A BATTLE
+            if(chance == 1)
+            {
+                Invoke("enterBattleScene", restartLevelDelay);
+            }
+            
         }
     }
 

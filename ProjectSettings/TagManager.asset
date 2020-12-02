@@ -5,14 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - RoomPath
-  - LockedDoor
-  - Exit
   - Enemy
-  - Soda
-  - Food
   - EnemyAdv
   - Key
   - StartBtn
+  - DangerArea
   layers:
   - Default
   - TransparentFX
