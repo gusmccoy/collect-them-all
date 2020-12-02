@@ -75,6 +75,7 @@ public class Player : MovingObject
         {
             animator.SetTrigger("playerWalkRight");
             vertical = 0;
+            enterBattleScene();
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
@@ -155,6 +156,11 @@ public class Player : MovingObject
     private void endGame()
     {
         SceneManager.LoadScene("TitleScreen");
+    }
+
+    private void enterBattleScene()
+    {
+        SceneManager.LoadScene("BattleScene");
     }
 
     private void Restart()
