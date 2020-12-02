@@ -25,17 +25,17 @@ public class Player : MovingObject
     //Start overrides the Start function of MovingObject
     protected override void Start()
     {
-        //Get a component reference to the Player's animator component
         animator = GetComponent<Animator>();
 
-        log = new CreatureLog();
-
-        //Get the current food point total stored in GameManager.instance between levels.
-        //food = GameManager.instance.playerFoodPoints;
-        //foodText.text = "Food: " + food;
-
-        //score = 0;
-        //scoreText.text = "Score: " + score;
+        if (SaveState.playerCoordinateX == 0.0f && SaveState.playerCoordinateY == 0.0f)
+        {
+            log = new CreatureLog();
+        }
+        // RELOAD CURRENT PLAYER
+        else
+        {
+            transform.position = new Vector2(SaveState.playerCoordinateX, SaveState.playerCoordinateY);
+        }
 
         //Call the Start function of the MovingObject base class.
         base.Start();
@@ -170,6 +170,10 @@ public class Player : MovingObject
 
     private void enterBattleScene()
     {
+        SaveState.allyID = 1;
+        SaveState.enemyID = 1;
+        SaveState.playerCoordinateX = transform.position.x;
+        SaveState.playerCoordinateY = transform.position.y;
         SceneManager.LoadScene("BattleScene");
     }
 

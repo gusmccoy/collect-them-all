@@ -5,8 +5,8 @@ using UnityEngine;
 public static class SaveState
 {
     // WILL BE USED TO RETURN PLAYER TO CORRECT COORDIATES AFTER MAIN SCENE IS RELOADED
-    public static float playerCoordinateX { get; set; }
-    public static float playerCoordinateY { get; set; }
+    public static float playerCoordinateX = 0;
+    public static float playerCoordinateY = 0;
 
     // WILL BE USED TO GET THE CORRECT SPRITES
     public static int allyID { get; set; }
