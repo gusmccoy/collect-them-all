@@ -65,29 +65,25 @@ public class Player : MovingObject
         vertical = (int) Input.GetAxisRaw("Vertical");
 
         //Check if moving horizontally, if so set vertical to zero.
-        if (horizontal == -1)
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             animator.SetTrigger("playerWalkLeft");
             vertical = 0;
         }
-        else if (horizontal == 1)
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             animator.SetTrigger("playerWalkRight");
             vertical = 0;
         }
-        else if (vertical == -1)
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             animator.SetTrigger("playerWalkForward");
             horizontal = 0;
         }
-        else if (vertical == 1)
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             animator.SetTrigger("playerWalkBackward");
             horizontal = 0;
-        }
-        else if (vertical == 0 && horizontal == 0)
-        {
-            animator.SetTrigger("playerWalkForward");
         }
 
         //Check if we have a non-zero value for horizontal or vertical
