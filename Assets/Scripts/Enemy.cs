@@ -8,6 +8,9 @@ public class Enemy : MovingObject
     public int playerDamage;                             //The amount of food points to subtract from the player when attacking.
     public AudioClip enemyAttack1;
     public AudioClip enemyAttack2;
+    public AudioClip chopSound1;
+    public AudioClip chopSound2;
+    public int hp = 3;
 
     private Animator animator;                            //Variable of type Animator to store a reference to the enemy's Animator component.
     private Transform target;                            //Transform to attempt to move toward each turn.
@@ -107,5 +110,20 @@ public class Enemy : MovingObject
              BoardManager.gameBoard[selfRow, selfColumn] != 'O' && BoardManager.gameBoard[selfRow, selfColumn] != '0'; selfRow++) ;
 
         return targetRow == selfRow;
+    }
+    public void DamageEnemy(int loss)
+    {
+        //Call the RandomizeSfx function of SoundManager to play one of two chop sounds.
+        SoundManager.instance.RandomizeSfx(chopSound1, chopSound2);
+
+        //Subtract loss from hit point total.
+        hp -= loss;
+
+        //If hit points are less than or equal to zero:
+        if (hp <= 0)
+        {
+            //Disable the gameObject.
+            gameObject.SetActive(false);
+        }
     }
 }

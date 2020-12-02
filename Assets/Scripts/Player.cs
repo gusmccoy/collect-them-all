@@ -9,6 +9,7 @@ public class Player : MovingObject
 {
     public GameObject Camera;
     public float restartLevelDelay = 1f;
+    public int enemyDamage = 1;
     public Text foodText;
     public Text scoreText;
     public AudioClip moveSound1;
@@ -91,7 +92,7 @@ public class Player : MovingObject
         {
             //Call AttemptMove passing in the generic parameter Wall, since that is what Player may interact with if they encounter one (by attacking it)
             //Pass in horizontal and vertical as parameters to specify the direction to move Player in.
-            AttemptMove<Wall>(horizontal, vertical);
+            AttemptMove<Enemy>(horizontal, vertical);
         }
     }
 
@@ -129,8 +130,14 @@ public class Player : MovingObject
     protected override void OnCantMove<T>(T component)
     {
         //Set hitWall to equal the component passed in as a parameter.
-        Wall hitWall = component as Wall;
+        Enemy hitEnemy = component as Enemy;
 
+        hitEnemy.DamageEnemy(enemyDamage);
+
+        if (hitEnemy.hp == 0)
+        {
+            // Add function that catches the enemy
+        }
     }
 
     // OnTriggerEnter2D is sent when another object enters a trigger collider attached to this object (2D physics only).
