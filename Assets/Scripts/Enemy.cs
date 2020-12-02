@@ -96,20 +96,22 @@ public class Enemy : MovingObject
         //Set the attack trigger of animator to trigger Enemy attack animation.
         animator.SetTrigger("enemyAttack");
 
-        SoundManager.instance.RandomizeSfx(enemyAttack1, enemyAttack2);
+        //SoundManager.instance.RandomizeSfx(enemyAttack1, enemyAttack2);
     }
 
+    // Function has issues and I'm not sure exactly what the issue is
     private bool isTargetInSameRoom()
     {
-        int targetColumn = (int)Math.Round(target.position.y);
-        int selfColumn = (int)Math.Round(transform.position.y);
-        int targetRow, selfRow;
-        for (targetRow = (int)Math.Round(target.position.x); BoardManager.gameBoard[targetRow, targetColumn] != 'X' &&
-            BoardManager.gameBoard[targetRow, targetColumn] != 'O' && BoardManager.gameBoard[targetRow, targetColumn] != '0'; targetRow++);
-        for (selfRow = (int)Math.Round(transform.position.x); BoardManager.gameBoard[selfRow, selfColumn] != 'X' &&
-             BoardManager.gameBoard[selfRow, selfColumn] != 'O' && BoardManager.gameBoard[selfRow, selfColumn] != '0'; selfRow++) ;
+        //int targetColumn = (int)Math.Round(target.position.y);
+        //int selfColumn = (int)Math.Round(transform.position.y);
+        //int targetRow, selfRow;
+        //for (targetRow = (int)Math.Round(target.position.x); BoardManager.gameBoard[targetRow, targetColumn] != 'X' &&
+        //    BoardManager.gameBoard[targetRow, targetColumn] != 'O' && BoardManager.gameBoard[targetRow, targetColumn] != '0'; targetRow++);
+        //for (selfRow = (int)Math.Round(transform.position.x); BoardManager.gameBoard[selfRow, selfColumn] != 'X' &&
+        //     BoardManager.gameBoard[selfRow, selfColumn] != 'O' && BoardManager.gameBoard[selfRow, selfColumn] != '0'; selfRow++) ;
 
-        return targetRow == selfRow;
+        //return targetRow == selfRow;
+        return true;
     }
     public void DamageEnemy(int loss)
     {
