@@ -547,6 +547,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989d3b027c9afae4398f10feafd956cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemySprite: {fileID: 38377656}
+  allySprite: {fileID: 590772739}
   allyHealth: 3
   enemyHealth: 3
   yourTurn: 1
