@@ -15,8 +15,6 @@ public class Player : MovingObject
     public AudioSource CityMusic;
     public AudioSource WildernessMusic;
 
-    public CreatureLog log;
-
     [HideInInspector] public static int score;
 
     private Animator animator;
@@ -30,13 +28,11 @@ public class Player : MovingObject
 
         if (SaveState.playerCoordinateX == 0.0f && SaveState.playerCoordinateY == 0.0f)
         {
-            log = new CreatureLog();
+
         }
-        // RELOAD CURRENT PLAYER
         else
         {
             transform.position = new Vector2(SaveState.playerCoordinateX, SaveState.playerCoordinateY);
-
         }
 
         if(SaveState.inTown)
