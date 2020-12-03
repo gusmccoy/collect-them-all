@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 1545137883}
   - component: {fileID: 1545137882}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: MessageBoard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
