@@ -36,6 +36,14 @@ public class Player : MovingObject
         else
         {
             transform.position = new Vector2(SaveState.playerCoordinateX, SaveState.playerCoordinateY);
+            if(SaveState.inTown)
+            {
+                CityMusic.Play();
+            }
+            else
+            {
+                WildernessMusic.Play();
+            }
         }
 
         //Call the Start function of the MovingObject base class.
@@ -188,6 +196,7 @@ public class Player : MovingObject
         SaveState.enemyID = rand.Next(12);
         SaveState.playerCoordinateX = transform.position.x;
         SaveState.playerCoordinateY = transform.position.y;
+        SaveState.inTown = false;
         SceneManager.LoadScene("BattleScene");
     }
 

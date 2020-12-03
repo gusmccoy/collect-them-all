@@ -8,6 +8,9 @@ public static class SaveState
     public static float playerCoordinateX = 0;
     public static float playerCoordinateY = 0;
 
+    // WILL BE USED TO DETERMINE WHICH MUSIC TO PLAY ON MAIN SCENE LOAD
+    public static bool inTown = true;
+
     // WILL BE USED TO GET THE CORRECT SPRITES
     public static int allyID { get; set; }
     public static int enemyID { get; set; }
