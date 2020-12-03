@@ -21,6 +21,7 @@ public class Player : MovingObject
 
     private Animator animator;
     private int food;
+    private bool ignoreGateCollison = false;
 
 
     //Start overrides the Start function of MovingObject
@@ -36,14 +37,16 @@ public class Player : MovingObject
         else
         {
             transform.position = new Vector2(SaveState.playerCoordinateX, SaveState.playerCoordinateY);
-            if(SaveState.inTown)
-            {
-                CityMusic.Play();
-            }
-            else
-            {
-                WildernessMusic.Play();
-            }
+
+        }
+
+        if(SaveState.inTown)
+        {
+            CityMusic.Play();
+        }
+        else
+        {
+            WildernessMusic.Play();
         }
 
         //Call the Start function of the MovingObject base class.
@@ -170,15 +173,25 @@ public class Player : MovingObject
         }
         if (other.tag == "CityGate")
         {
-            if(CityMusic.isPlaying)
+            Debug.Log("Passed Gate");
+            if(!ignoreGateCollison)
             {
-                CityMusic.Stop();
-                WildernessMusic.Play();
+                if(CityMusic.isPlaying)
+                {
+                    ignoreGateCollison = true;
+                    CityMusic.Stop();
+                    WildernessMusic.Play();
+                }
+                else
+                {
+                    ignoreGateCollison = true;
+                    WildernessMusic.Stop();
+                    CityMusic.Play();
+                }
             }
             else
             {
-                WildernessMusic.Stop();
-                CityMusic.Play();
+                ignoreGateCollison = false;
             }
         }
     }
