@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;        //Allows us to use SceneManager
+using UnityEngine.SceneManagement;
 using System;
 using UnityEngine.UI;
 
@@ -12,7 +12,8 @@ public class Player : MovingObject
     public int enemyDamage = 1;
     public Text foodText;
     public Text scoreText;
-    public AudioClip moveSound1;
+    public AudioSource CityMusic;
+    public AudioSource WildernessMusic;
 
     public CreatureLog log;
 
@@ -158,7 +159,19 @@ public class Player : MovingObject
             {
                 Invoke("enterBattleScene", restartLevelDelay);
             }
-            
+        }
+        if (other.tag == "CityGate")
+        {
+            if(CityMusic.isPlaying)
+            {
+                CityMusic.Stop();
+                WildernessMusic.Play();
+            }
+            else
+            {
+                WildernessMusic.Stop();
+                CityMusic.Play();
+            }
         }
     }
 
