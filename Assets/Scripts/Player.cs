@@ -21,7 +21,6 @@ public class Player : MovingObject
 
     private Animator animator;
     private int food;
-    private bool ignoreGateCollison = false;
 
 
     //Start overrides the Start function of MovingObject
@@ -173,25 +172,15 @@ public class Player : MovingObject
         }
         if (other.tag == "CityGate")
         {
-            Debug.Log("Passed Gate");
-            if(!ignoreGateCollison)
+            if(transform.position.y <= 21.0f)
             {
-                if(CityMusic.isPlaying)
-                {
-                    ignoreGateCollison = true;
-                    CityMusic.Stop();
-                    WildernessMusic.Play();
-                }
-                else
-                {
-                    ignoreGateCollison = true;
-                    WildernessMusic.Stop();
-                    CityMusic.Play();
-                }
+                WildernessMusic.Stop();
+                CityMusic.Play();
             }
             else
             {
-                ignoreGateCollison = false;
+                CityMusic.Stop();
+                WildernessMusic.Play();
             }
         }
     }
