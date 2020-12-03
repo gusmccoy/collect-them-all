@@ -1,145 +1,50 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Battle : MonoBehaviour
 {
     public float allyHealth = 3.0f;
     public float enemyHealth = 3.0f;
-    public float allyDamage = 1.0f;
-    public float enemyDamage = 0.5f;
     public bool yourTurn = true;
-    public bool editHealthText = true;
-    public Text allyText;
-    public Text enemyText;
-    public Text fightOverText;
-    public GameObject fightOverImage;
 
     void Start()
     {
-        fightOverImage.SetActive(false);
-        allyText.text = "HP: " + allyHealth;
-        enemyText.text = "HP: " + enemyHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (editHealthText)
+        if(yourTurn)
         {
-            allyText.text = "HP: " + allyHealth;
-            enemyText.text = "HP: " + enemyHealth;
-
-            if (yourTurn)
+            if(Input.GetKeyDown(KeyCode.F))
             {
-                if (Input.GetKeyDown(KeyCode.F))
-                {
-                    editHealthText = false;
-
-                    StartCoroutine(DamageEnemy());
-                }
-
-                if (Input.GetKeyDown(KeyCode.R))
-                {
-                    SceneManager.LoadScene("SampleScene");
-                }
+                enemyHealth--;
+                Debug.Log("Enemy Health: " + enemyHealth);
+                yourTurn = false;
             }
-            else
+            if(Input.GetKeyDown(KeyCode.R))
             {
-                editHealthText = false;
-
-                StartCoroutine(DamageAlly());
-            }
-
-            if (enemyHealth == 0)
-            {
-                Debug.Log("You defeated the enemy!");
-                StartCoroutine(FightOver());
-            }
-
-            if (allyHealth == 0)
-            {
-                Debug.Log("You lost to the enemy, retreat!");
-                StartCoroutine(FightOver());
+                SceneManager.LoadScene("SampleScene");
             }
         }
-    }
-
-    IEnumerator DamageAlly()
-    {
-        allyHealth -= enemyDamage;
-
-        if (allyHealth != 0)
-        {
-            allyText.text = allyText.text + "  -" + enemyDamage;
-        }
         else
         {
-            allyText.text = "Fainted";
-            allyText.color = Color.red;
+            allyHealth -= 0.5f;
+            Debug.Log("Ally Health: " + allyHealth);
+            yourTurn = true;
         }
 
-        Debug.Log("Ally Health: " + allyHealth);
-        yourTurn = true;
-
-        if (allyHealth != 0)
+        if(enemyHealth == 0)
         {
-            yield return new WaitForSeconds(0.5f);
-            editHealthText = true;
+            Debug.Log("You defeated the enemy!");
+            SceneManager.LoadScene("SampleScene");
         }
-        else
+        if(allyHealth == 0)
         {
-            yield return new WaitForSeconds(0);
+            Debug.Log("You lost to the enemy, retreat!");
         }
-    }
-
-    IEnumerator DamageEnemy()
-    {
-        enemyHealth -= allyDamage;
-
-        if (enemyHealth != 0)
-        {
-            enemyText.text = enemyText.text + "  -" + allyDamage;
-        }
-        else
-        {
-            enemyText.text = "Fainted";
-            enemyText.color = Color.red;
-        }
-
-        Debug.Log("Enemy Health: " + enemyHealth);
-        yourTurn = false;
-
-        if (enemyHealth != 0)
-        {
-            yield return new WaitForSeconds(0.5f);
-            editHealthText = true;
-        }
-        else
-        {
-            yield return new WaitForSeconds(0);
-        }
-    }
-
-    IEnumerator FightOver()
-    {
-        if (allyHealth == 0)
-        {
-            fightOverText.text = "You lost to the enemy, retreat!";
-            fightOverText.color = Color.red;
-        }
-        else
-        {
-            fightOverText.text = "You defeated the enemy!";
-            fightOverText.color = Color.green;
-        }
-
-        fightOverImage.SetActive(true);
-
-        yield return new WaitForSeconds(3);
-
-        SceneManager.LoadScene("SampleScene");
+       
     }
 }
