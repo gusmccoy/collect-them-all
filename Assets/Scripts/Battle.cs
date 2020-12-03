@@ -15,6 +15,8 @@ public class Battle : MonoBehaviour
     public Text allyText;
     public Text enemyText;
     public Text fightOverText;
+    public AudioSource BattleTheme;
+    public AudioSource NewCreatureCapture;
 
     void Start()
     {
@@ -51,15 +53,16 @@ public class Battle : MonoBehaviour
                 StartCoroutine(DamageAlly());
             }
 
+
+
             if (enemyHealth == 0)
             {
-                Debug.Log("You defeated the enemy!");
+                BattleTheme.Stop();
                 StartCoroutine(FightOver());
             }
-
-            if (allyHealth == 0)
+            else if (allyHealth == 0)
             {
-                Debug.Log("You lost to the enemy, retreat!");
+                BattleTheme.Stop();
                 StartCoroutine(FightOver());
             }
         }
@@ -130,9 +133,13 @@ public class Battle : MonoBehaviour
         else
         {
             fightOverText.color = Color.green;
-            SaveState.capturedCreatures[SaveState.enemyID] = true;
-            yield return new WaitForSeconds(3);
-            SceneManager.LoadScene("CreatureLogScreen");
+            if (!SaveState.capturedCreatures[SaveState.enemyID])
+            {
+                NewCreatureCapture.Play();
+                SaveState.capturedCreatures[SaveState.enemyID] = true;
+                yield return new WaitForSeconds(3);
+                SceneManager.LoadScene("CreatureLogScreen");
+            }
         }
         
     }
