@@ -130,11 +130,10 @@ public class Battle : MonoBehaviour
         else
         {
             fightOverText.color = Color.green;
+            SaveState.capturedCreatures[SaveState.enemyID] = true;
+            yield return new WaitForSeconds(3);
+            SceneManager.LoadScene("CreatureLogScreen");
         }
-
-        yield return new WaitForSeconds(3);
-
-        SaveState.capturedCreatures[SaveState.enemyID] = true;
-        SceneManager.LoadScene("SampleScene");
+        
     }
 }

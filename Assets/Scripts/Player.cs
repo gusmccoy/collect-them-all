@@ -36,7 +36,6 @@ public class Player : MovingObject
         else
         {
             transform.position = new Vector2(SaveState.playerCoordinateX, SaveState.playerCoordinateY);
-            SceneManager.LoadScene("CreatureLogScreen");
         }
 
         if(SaveState.inTown)
@@ -50,14 +49,6 @@ public class Player : MovingObject
 
         //Call the Start function of the MovingObject base class.
         base.Start();
-    }
-
-
-    //This function is called when the behaviour becomes disabled or inactive.
-    private void OnDisable()
-    {
-        //When Player object is disabled, store the current local food total in the GameManager so it can be re-loaded in next level.
-        // GameManager.instance.playerFoodPoints = food;
     }
 
 
