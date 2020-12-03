@@ -15,11 +15,9 @@ public class Battle : MonoBehaviour
     public Text allyText;
     public Text enemyText;
     public Text fightOverText;
-    public GameObject fightOverImage;
 
     void Start()
     {
-        fightOverImage.SetActive(false);
         allyText.text = "HP: " + allyHealth;
         enemyText.text = "HP: " + enemyHealth;
     }
@@ -27,51 +25,44 @@ public class Battle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (yourTurn)
-            if (editHealthText)
+        if (editHealthText)
+        {
+            allyText.text = "HP: " + allyHealth;
+            enemyText.text = "HP: " + enemyHealth;
+
+            if (yourTurn)
             {
                 if (Input.GetKeyDown(KeyCode.F))
-                    allyText.text = "HP: " + allyHealth;
-                enemyText.text = "HP: " + enemyHealth;
-
-                if (yourTurn)
-                {
-                    if (Input.GetKeyDown(KeyCode.F))
-                    {
-                        editHealthText = false;
-
-                        StartCoroutine(DamageEnemy());
-                    }
-
-                    if (Input.GetKeyDown(KeyCode.R))
-                    {
-                        SceneManager.LoadScene("SampleScene");
-                    }
-                }
-                else
                 {
                     editHealthText = false;
 
-                    StartCoroutine(DamageAlly());
+                    StartCoroutine(DamageEnemy());
                 }
 
-                if (enemyHealth == 0)
-                {
-                    enemyHealth--;
-                    Debug.Log("Enemy Health: " + enemyHealth);
-                    yourTurn = false;
-                    Debug.Log("You defeated the enemy!");
-                    StartCoroutine(FightOver());
-                }
                 if (Input.GetKeyDown(KeyCode.R))
-
-                    if (allyHealth == 0)
-                    {
-                        SceneManager.LoadScene("SampleScene");
-                        Debug.Log("You lost to the enemy, retreat!");
-                        StartCoroutine(FightOver());
-                    }
+                {
+                    SceneManager.LoadScene("SampleScene");
+                }
             }
+            else
+            {
+                editHealthText = false;
+
+                StartCoroutine(DamageAlly());
+            }
+
+            if (enemyHealth == 0)
+            {
+                Debug.Log("You defeated the enemy!");
+                StartCoroutine(FightOver());
+            }
+
+            if (allyHealth == 0)
+            {
+                Debug.Log("You lost to the enemy, retreat!");
+                StartCoroutine(FightOver());
+            }
+        }
     }
 
     IEnumerator DamageAlly()
@@ -84,30 +75,22 @@ public class Battle : MonoBehaviour
         }
         else
         {
-            allyHealth -= 0.5f;
-            Debug.Log("Ally Health: " + allyHealth);
-            yourTurn = true;
             allyText.text = "Fainted";
             allyText.color = Color.red;
         }
 
-        if (enemyHealth == 0)
-            Debug.Log("Ally Health: " + allyHealth);
+        Debug.Log("Ally Health: " + allyHealth);
         yourTurn = true;
 
         if (allyHealth != 0)
         {
-            Debug.Log("You defeated the enemy!");
-            SceneManager.LoadScene("SampleScene");
             yield return new WaitForSeconds(0.5f);
             editHealthText = true;
-        }  
-        else if (allyHealth == 0)
+        }
+        else
         {
-            Debug.Log("You lost to the enemy, retreat!");
             yield return new WaitForSeconds(0);
         }
-
     }
 
     IEnumerator DamageEnemy()
@@ -150,8 +133,6 @@ public class Battle : MonoBehaviour
             fightOverText.text = "You defeated the enemy!";
             fightOverText.color = Color.green;
         }
-
-        fightOverImage.SetActive(true);
 
         yield return new WaitForSeconds(3);
 
