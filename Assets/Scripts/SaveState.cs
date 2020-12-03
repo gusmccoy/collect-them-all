@@ -16,6 +16,6 @@ public static class SaveState
     public static int enemyID { get; set; }
 
     // WILL BE USED TO DETERMINE IF GAME IS OVER/INFORM USER WHAT CREATURES THEY'VE CAPTURED
-    public static bool[] capturedCreatures { get; set; }
+    public static bool[] capturedCreatures = new bool[10];
 
 }

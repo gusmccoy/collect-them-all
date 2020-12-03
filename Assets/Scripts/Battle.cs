@@ -125,17 +125,16 @@ public class Battle : MonoBehaviour
     {
         if (allyHealth == 0)
         {
-            fightOverText.text = "You lost to the enemy, retreat!";
             fightOverText.color = Color.red;
         }
         else
         {
-            fightOverText.text = "You defeated the enemy!";
             fightOverText.color = Color.green;
         }
 
         yield return new WaitForSeconds(3);
 
+        SaveState.capturedCreatures[SaveState.enemyID] = true;
         SceneManager.LoadScene("SampleScene");
     }
 }

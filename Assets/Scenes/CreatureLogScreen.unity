@@ -281,6 +281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 49190049}
   - component: {fileID: 49190050}
+  - component: {fileID: 49190051}
   m_Layer: 0
   m_Name: Creature (3)
   m_TagString: Untagged
@@ -353,6 +354,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &49190051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49190048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d57d9f7743693047bf123d645a490a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 3
+  unobtained: {fileID: 21300000, guid: 67feccaea2c66af4ca017f5bc85c62cc, type: 3}
 --- !u!1 &110893160
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,6 +418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 182504426}
   - component: {fileID: 182504427}
+  - component: {fileID: 182504428}
   m_Layer: 0
   m_Name: Creature
   m_TagString: Untagged
@@ -475,6 +491,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &182504428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182504425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d57d9f7743693047bf123d645a490a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  unobtained: {fileID: 21300000, guid: dc9ef11086f43804e8714d638e40aa04, type: 3}
 --- !u!1 &345621906
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,6 +594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 554538078}
   - component: {fileID: 554538079}
+  - component: {fileID: 554538080}
   m_Layer: 0
   m_Name: Creature (2)
   m_TagString: Untagged
@@ -636,6 +667,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &554538080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554538077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d57d9f7743693047bf123d645a490a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2
+  unobtained: {fileID: 21300000, guid: def04db6657f0664cae9b8e4c1902169, type: 3}
 --- !u!1 &885555594
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,6 +691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 885555595}
   - component: {fileID: 885555596}
+  - component: {fileID: 885555597}
   m_Layer: 0
   m_Name: Creature (9)
   m_TagString: Untagged
@@ -718,6 +764,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &885555597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885555594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d57d9f7743693047bf123d645a490a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 9
+  unobtained: {fileID: 21300000, guid: 3ae8ace4d93e5ab4a9b5096a28e4df14, type: 3}
 --- !u!1 &907479764
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,6 +788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 907479765}
   - component: {fileID: 907479766}
+  - component: {fileID: 907479767}
   m_Layer: 0
   m_Name: Creature (5)
   m_TagString: Untagged
@@ -800,6 +861,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &907479767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907479764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d57d9f7743693047bf123d645a490a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 5
+  unobtained: {fileID: 21300000, guid: 1d5a04251312ebc40bfb7904976d7eb4, type: 3}
 --- !u!1 &982771737
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,6 +1214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1224178199}
   - component: {fileID: 1224178200}
+  - component: {fileID: 1224178201}
   m_Layer: 0
   m_Name: Creature (7)
   m_TagString: Untagged
@@ -1211,6 +1287,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1224178201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224178198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d57d9f7743693047bf123d645a490a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 7
+  unobtained: {fileID: 21300000, guid: 4a7fd70e63f05754fac770d9c14e77f8, type: 3}
 --- !u!1 &1348744935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,6 +1311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1348744936}
   - component: {fileID: 1348744937}
+  - component: {fileID: 1348744938}
   m_Layer: 0
   m_Name: Creature (1)
   m_TagString: Untagged
@@ -1293,6 +1384,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1348744938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348744935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d57d9f7743693047bf123d645a490a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1
+  unobtained: {fileID: 21300000, guid: 1fd6c8118382deb46af8356a248db7f1, type: 3}
 --- !u!1 &1381527706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1385,6 +1490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1447404894}
   - component: {fileID: 1447404895}
+  - component: {fileID: 1447404896}
   m_Layer: 0
   m_Name: Creature (4)
   m_TagString: Untagged
@@ -1457,6 +1563,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1447404896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447404893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d57d9f7743693047bf123d645a490a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 4
+  unobtained: {fileID: 21300000, guid: 9553a16818a4de24fb8494437b9c421e, type: 3}
 --- !u!1 &1509953414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,6 +1669,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1590083486}
   - component: {fileID: 1590083487}
+  - component: {fileID: 1590083488}
   m_Layer: 0
   m_Name: Creature (8)
   m_TagString: Untagged
@@ -1621,6 +1742,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1590083488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590083485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d57d9f7743693047bf123d645a490a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 8
+  unobtained: {fileID: 21300000, guid: 04bcfd5fd17e35b458a93527e55eb4d2, type: 3}
 --- !u!1 &1598078780
 GameObject:
   m_ObjectHideFlags: 0
@@ -1795,6 +1930,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1717641978}
   - component: {fileID: 1717641979}
+  - component: {fileID: 1717641980}
   m_Layer: 0
   m_Name: Creature (6)
   m_TagString: Untagged
@@ -1867,6 +2003,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1717641980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717641977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d57d9f7743693047bf123d645a490a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 6
+  unobtained: {fileID: 21300000, guid: 82ea281e1fe6a244c95ae658225ae89c, type: 3}
 --- !u!1 &1781488152
 GameObject:
   m_ObjectHideFlags: 0

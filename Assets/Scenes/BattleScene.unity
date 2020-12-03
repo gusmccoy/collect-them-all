@@ -219,8 +219,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySprites:
-  - {fileID: 21300000, guid: 26da99448fc4de04bbf56c0c9ab2b2f9, type: 3}
-  - {fileID: 21300000, guid: b440b054563c66c438350793e846bc39, type: 3}
   - {fileID: 21300000, guid: 081d1b3d6b7072d4d8a60dfdf3ab03a2, type: 3}
   - {fileID: 21300000, guid: 570d0c57ea75cdb41a0d8db422c8d733, type: 3}
   - {fileID: 21300000, guid: 6f14d524bff28db4690b07e5b190f012, type: 3}

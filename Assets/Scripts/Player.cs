@@ -28,11 +28,15 @@ public class Player : MovingObject
 
         if (SaveState.playerCoordinateX == 0.0f && SaveState.playerCoordinateY == 0.0f)
         {
-
+            for (int i = 0; i < 10; i++)
+            {
+                SaveState.capturedCreatures[i] = false;
+            }
         }
         else
         {
             transform.position = new Vector2(SaveState.playerCoordinateX, SaveState.playerCoordinateY);
+            SceneManager.LoadScene("CreatureLogScreen");
         }
 
         if(SaveState.inTown)
@@ -191,7 +195,7 @@ public class Player : MovingObject
     {
         var rand = new System.Random();
         SaveState.allyID = 1;
-        SaveState.enemyID = rand.Next(12);
+        SaveState.enemyID = rand.Next(10);
         SaveState.playerCoordinateX = transform.position.x;
         SaveState.playerCoordinateY = transform.position.y;
         SaveState.inTown = false;
