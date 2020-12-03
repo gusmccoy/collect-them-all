@@ -172,7 +172,7 @@ public class Player : MovingObject
     {
         var rand = new System.Random();
         SaveState.allyID = 1;
-        SaveState.enemyID = rand.Next(2);
+        SaveState.enemyID = rand.Next(12);
         SaveState.playerCoordinateX = transform.position.x;
         SaveState.playerCoordinateY = transform.position.y;
         SceneManager.LoadScene("BattleScene");
