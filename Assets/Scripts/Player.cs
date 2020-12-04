@@ -10,9 +10,8 @@ public class Player : MovingObject
     public GameObject Camera;
     public float restartLevelDelay = 1f;
     public int enemyDamage = 1;
-    public Text foodText;
-    public Text scoreText;
     public Text oakMessageText;
+    public GameObject messageImage;
     public AudioSource CityMusic;
     public AudioSource WildernessMusic;
 
@@ -26,6 +25,8 @@ public class Player : MovingObject
     protected override void Start()
     {
         animator = GetComponent<Animator>();
+
+        messageImage.SetActive(false);
 
         if (SaveState.playerCoordinateX == 0.0f && SaveState.playerCoordinateY == 0.0f)
         {
@@ -186,11 +187,13 @@ public class Player : MovingObject
 
             if(monstersCollected >= 5)
             {
-                oakMessageText.text = "Thank you so much for your contribution! You win!";
+                oakMessageText.text = "You collected " + monstersCollected + " monsters. Thank you so much for your contribution! You win!";
+                messageImage.SetActive(true);
             }
             else
             {
-                oakMessageText.text = "Goodness! You seemed to have jumped the gun! You still need " + (5 - monstersCollected) + " before you've completed your task!";
+                oakMessageText.text = "Goodness! You seemed to have jumped the gun! You still need " + (5 - monstersCollected) + " more monsters before you've completed your task!";
+                messageImage.SetActive(true);
                 Invoke("deactiveText", 3.0f);
             }
         }
@@ -199,6 +202,7 @@ public class Player : MovingObject
     private void deactiveText()
     {
         oakMessageText.text = "";
+        messageImage.SetActive(false);
     }
 
 
