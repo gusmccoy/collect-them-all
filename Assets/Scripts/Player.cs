@@ -111,7 +111,8 @@ public class Player : MonoBehaviour
     {
         if (other.tag == "DangerArea")
         {
-            var rand = new System.Random();
+            TimeSpan t = (DateTime.UtcNow - new DateTime(1970, 1, 1));
+            var rand = new System.Random(t.Seconds);
             int chance = rand.Next(4);
             // ONE IN FOUR CHANCE OF A BATTLE
             if(chance == 1)
