@@ -14,6 +14,6 @@ public class CreatureLogController : MonoBehaviour
     }
     private void ReturnToGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("MainScene");
     }
 }

@@ -15,12 +15,14 @@ public class Battle : MonoBehaviour
     public Text fightOverText;
     public AudioSource BattleTheme;
     public AudioSource NewCreatureCapture;
+    public AudioSource DefeatedMusic;
     public Button fightBtn;
     public Button runBtn;
 
     private float allyHealth = 3.0f;
     private float allyDamage = 1.0f;
     private int monstersCollected;
+    private bool gotToLog = false;
 
     void Start()
     {
@@ -178,7 +180,10 @@ public class Battle : MonoBehaviour
         if (allyHealth <= 0)
         {
             fightOverText.color = Color.red;
-            fightOverText.text = "You lost the fight, reatreat!";
+            DefeatedMusic.Play();
+            gotToLog = false;
+            yield return new WaitForSeconds(3);
+            fightOverText.text = "You lost the fight, retreat!";
             SceneManager.LoadScene("MainScene");
         }
         else
@@ -190,12 +195,17 @@ public class Battle : MonoBehaviour
             {
                 NewCreatureCapture.Play();
                 SaveState.capturedCreatures[SaveState.enemyID] = true;
+                gotToLog = true;
                 yield return new WaitForSeconds(3);
-                SceneManager.LoadScene("CreatureLogScreen");
             }
             else
             {
+                gotToLog = false;
                 SceneManager.LoadScene("MainScene");
+            }
+            if(gotToLog)
+            {
+                SceneManager.LoadScene("CreatureLogScreen");
             }
         }
     }

@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public GameObject messageImage;
     public AudioSource CityMusic;
     public AudioSource WildernessMusic;
+    public AudioSource BeatGameMusic;
 
     public float speed = 5.0f;
 
@@ -145,7 +146,9 @@ public class Player : MonoBehaviour
             {
                 oakMessageText.text = "You collected " + monstersCollected + " monsters. Thank you so much for your contribution! You win!";
                 messageImage.SetActive(true);
-                Invoke("endGame", 3.0f);
+                CityMusic.Stop();
+                BeatGameMusic.Play();
+                Invoke("endGame", 3.5f);
             }
             else
             {
