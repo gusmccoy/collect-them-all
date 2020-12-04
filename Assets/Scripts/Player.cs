@@ -179,6 +179,7 @@ public class Player : MovingObject
         if( other.tag == "Oak")
         {
             int monstersCollected = 0;
+
             for(int i = 0; i < 10; i++)
             {
                 if (SaveState.capturedCreatures[i])
@@ -189,6 +190,7 @@ public class Player : MovingObject
             {
                 oakMessageText.text = "You collected " + monstersCollected + " monsters. Thank you so much for your contribution! You win!";
                 messageImage.SetActive(true);
+                Invoke("endGame", 3.0f);
             }
             else
             {
@@ -208,6 +210,11 @@ public class Player : MovingObject
 
     private void endGame()
     {
+        SaveState.allyID = 1;
+        SaveState.playerCoordinateX = 0;
+        SaveState.playerCoordinateY = 0;
+        SaveState.inTown = true;
+        SaveState.capturedCreatures = new bool[10];
         SceneManager.LoadScene("TitleScreen");
     }
 

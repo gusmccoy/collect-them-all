@@ -53,8 +53,6 @@ public class Battle : MonoBehaviour
                 StartCoroutine(DamageAlly());
             }
 
-
-
             if (enemyHealth == 0)
             {
                 BattleTheme.Stop();
@@ -129,10 +127,13 @@ public class Battle : MonoBehaviour
         if (allyHealth == 0)
         {
             fightOverText.color = Color.red;
+            fightOverText.text = "You lost the fight, reatreat!";
         }
         else
         {
             fightOverText.color = Color.green;
+            fightOverText.text = "You defeated the enemy!";
+
             if (!SaveState.capturedCreatures[SaveState.enemyID])
             {
                 NewCreatureCapture.Play();
