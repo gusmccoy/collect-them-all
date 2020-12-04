@@ -13,13 +13,12 @@ public class Player : MonoBehaviour
 
     public GameObject Camera;
     public float restartLevelDelay = 1f;
-    // public int enemyDamage = 1;
     public Text oakMessageText;
     public GameObject messageImage;
     public AudioSource CityMusic;
     public AudioSource WildernessMusic;
 
-    public float speed = 3.0f;
+    public float speed = 5.0f;
 
     [HideInInspector] public static int score;
 
@@ -43,6 +42,7 @@ public class Player : MonoBehaviour
         else
         {
             transform.position = new Vector2(SaveState.playerCoordinateX, SaveState.playerCoordinateY);
+            Camera.transform.position = transform.position + new Vector3(3.5f, 1f, -10f);
         }
 
         if(SaveState.inTown)

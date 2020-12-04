@@ -109,14 +109,11 @@ public class Battle : MonoBehaviour
                 StartCoroutine(DamageAlly());
             }
 
-            if (enemyHealth <= 0)
+            if (enemyHealth <= 0 || allyHealth <= 0)
             {
                 BattleTheme.Stop();
-                StartCoroutine(FightOver());
-            }
-            else if (allyHealth <= 0)
-            {
-                BattleTheme.Stop();
+                fightBtn.onClick.RemoveAllListeners();
+                runBtn.onClick.RemoveAllListeners();
                 StartCoroutine(FightOver());
             }
         }
@@ -136,7 +133,6 @@ public class Battle : MonoBehaviour
             allyText.color = Color.red;
         }
 
-        Debug.Log("Ally Health: " + allyHealth);
         yourTurn = true;
 
         if (allyHealth > 0)
@@ -164,7 +160,6 @@ public class Battle : MonoBehaviour
             enemyText.color = Color.red;
         }
 
-        Debug.Log("Enemy Health: " + enemyHealth);
         yourTurn = false;
 
         if (enemyHealth > 0)
@@ -184,6 +179,7 @@ public class Battle : MonoBehaviour
         {
             fightOverText.color = Color.red;
             fightOverText.text = "You lost the fight, reatreat!";
+            SceneManager.LoadScene("SampleScene");
         }
         else
         {
