@@ -105,13 +105,20 @@ public class Battle : MonoBehaviour
             allyText.text = "HP: " + allyHealth;
             enemyText.text = "HP: " + enemyHealth;
 
-            if (!yourTurn)
+            if (!yourTurn && enemyHealth > 0)
             {
                 editHealthText = false;
                 StartCoroutine(DamageAlly());
             }
 
-            if (enemyHealth <= 0 || allyHealth <= 0)
+            if (enemyHealth <= 0)
+            {
+                BattleTheme.Stop();
+                fightBtn.onClick.RemoveAllListeners();
+                runBtn.onClick.RemoveAllListeners();
+                StartCoroutine(FightOver());
+            }
+            else if(allyHealth <= 0)
             {
                 BattleTheme.Stop();
                 fightBtn.onClick.RemoveAllListeners();
@@ -177,21 +184,7 @@ public class Battle : MonoBehaviour
 
     IEnumerator FightOver()
     {
-        if (allyHealth <= 0)
-        {
-            fightOverText.color = Color.red;
-            DefeatedMusic.Play();
-            gotToLog = false;
-            SaveState.allyID = 1;
-            SaveState.playerCoordinateX = 0;
-            SaveState.playerCoordinateY = 0;
-            SaveState.inTown = true;
-            SaveState.capturedCreatures = new bool[10];
-            yield return new WaitForSeconds(3);
-            fightOverText.text = "You lost the fight, retreat!";
-            SceneManager.LoadScene("TitleScreen");
-        }
-        else
+        if (enemyHealth <= 0)
         {
             fightOverText.color = Color.green;
             fightOverText.text = "You defeated the enemy!";
@@ -208,10 +201,24 @@ public class Battle : MonoBehaviour
                 gotToLog = false;
                 SceneManager.LoadScene("MainScene");
             }
-            if(gotToLog)
+            if (gotToLog)
             {
                 SceneManager.LoadScene("CreatureLogScreen");
             }
+        }
+        else
+        {
+            fightOverText.color = Color.red;
+            DefeatedMusic.Play();
+            gotToLog = false;
+            SaveState.allyID = 1;
+            SaveState.playerCoordinateX = 0;
+            SaveState.playerCoordinateY = 0;
+            SaveState.inTown = true;
+            SaveState.capturedCreatures = new bool[10];
+            yield return new WaitForSeconds(3);
+            fightOverText.text = "You lost the fight, retreat!";
+            SceneManager.LoadScene("TitleScreen");
         }
     }
 
