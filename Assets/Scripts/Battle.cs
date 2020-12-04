@@ -140,7 +140,10 @@ public class Battle : MonoBehaviour
                 yield return new WaitForSeconds(3);
                 SceneManager.LoadScene("CreatureLogScreen");
             }
+            else
+            {
+                SceneManager.LoadScene("SampleScene");
+            }
         }
-        
     }
 }
