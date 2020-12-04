@@ -6,9 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Battle : MonoBehaviour
 {
-    public float allyHealth = 3.0f;
     public float enemyHealth = 3.0f;
-    public float allyDamage = 1.0f;
     public float enemyDamage = 0.5f;
     public bool yourTurn = true;
     public bool editHealthText = true;
@@ -18,8 +16,26 @@ public class Battle : MonoBehaviour
     public AudioSource BattleTheme;
     public AudioSource NewCreatureCapture;
 
+    private float allyHealth = 3.0f;
+    private float allyDamage = 1.0f;
+    private int monstersCollected;
+
     void Start()
     {
+        for (int x = 0; x < 10; x++)
+        {
+            if (SaveState.capturedCreatures[x])
+            {
+                monstersCollected++;
+            }
+        }
+
+        float bonusDamage = monstersCollected * 0.5f;
+        float bonusHealth = monstersCollected;
+
+        allyDamage += bonusDamage;
+        allyHealth += bonusHealth;
+
         allyText.text = "HP: " + allyHealth;
         enemyText.text = "HP: " + enemyHealth;
     }
@@ -53,12 +69,12 @@ public class Battle : MonoBehaviour
                 StartCoroutine(DamageAlly());
             }
 
-            if (enemyHealth == 0)
+            if (enemyHealth <= 0)
             {
                 BattleTheme.Stop();
                 StartCoroutine(FightOver());
             }
-            else if (allyHealth == 0)
+            else if (allyHealth <= 0)
             {
                 BattleTheme.Stop();
                 StartCoroutine(FightOver());
@@ -70,7 +86,7 @@ public class Battle : MonoBehaviour
     {
         allyHealth -= enemyDamage;
 
-        if (allyHealth != 0)
+        if (allyHealth > 0)
         {
             allyText.text = allyText.text + "  -" + enemyDamage;
         }
@@ -83,7 +99,7 @@ public class Battle : MonoBehaviour
         Debug.Log("Ally Health: " + allyHealth);
         yourTurn = true;
 
-        if (allyHealth != 0)
+        if (allyHealth > 0)
         {
             yield return new WaitForSeconds(0.5f);
             editHealthText = true;
@@ -98,7 +114,7 @@ public class Battle : MonoBehaviour
     {
         enemyHealth -= allyDamage;
 
-        if (enemyHealth != 0)
+        if (enemyHealth > 0)
         {
             enemyText.text = enemyText.text + "  -" + allyDamage;
         }
@@ -111,7 +127,7 @@ public class Battle : MonoBehaviour
         Debug.Log("Enemy Health: " + enemyHealth);
         yourTurn = false;
 
-        if (enemyHealth != 0)
+        if (enemyHealth > 0)
         {
             yield return new WaitForSeconds(0.5f);
             editHealthText = true;
@@ -124,7 +140,7 @@ public class Battle : MonoBehaviour
 
     IEnumerator FightOver()
     {
-        if (allyHealth == 0)
+        if (allyHealth <= 0)
         {
             fightOverText.color = Color.red;
             fightOverText.text = "You lost the fight, reatreat!";

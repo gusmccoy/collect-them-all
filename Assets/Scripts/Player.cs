@@ -18,7 +18,6 @@ public class Player : MovingObject
     [HideInInspector] public static int score;
 
     private Animator animator;
-    private int food;
 
 
     //Start overrides the Start function of MovingObject
@@ -105,7 +104,6 @@ public class Player : MovingObject
     protected override void AttemptMove<T>(int xDir, int yDir)
     {
         //Every time player moves, subtract from food points total.
-        food--;
 
         //foodText.text = "Food: " + food;
         //scoreText.text = "Score: " + score;
@@ -240,7 +238,6 @@ public class Player : MovingObject
         animator.SetTrigger("playerHit");
 
         //Subtract lost food points from the players total.
-        food -= loss;
 
         //foodText.text = "-" + loss + " Food: " + food;
 
@@ -252,11 +249,6 @@ public class Player : MovingObject
     private void CheckIfGameOver()
     {
         // Game is over when no more food
-        if (food <= 0)
-        {
-            //SoundManager.instance.PlaySingle(gameOverSound);
-            //SoundManager.instance.musicSource.Stop();
-            //GameManager.instance.GameOver();
-        }
+        
     }
 }
