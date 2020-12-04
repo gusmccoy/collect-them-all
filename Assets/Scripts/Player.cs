@@ -18,6 +18,7 @@ public class Player : MovingObject
     [HideInInspector] public static int score;
 
     private Animator animator;
+    private KeyCode direction = KeyCode.None;
 
 
     //Start overrides the Start function of MovingObject
@@ -59,42 +60,43 @@ public class Player : MovingObject
 
         if (!GameManager.instance.playersTurn) return;
 
-        int horizontal = 0;      //Used to store the horizontal move direction.
-        int vertical = 0;        //Used to store the vertical move direction.
+        int horizontal = 0;
+        int vertical = 0;
 
-        //Get input from the input manager, round it to an integer and store in horizontal to set x axis move direction
         horizontal = (int) Input.GetAxisRaw("Horizontal");
-
-        //Get input from the input manager, round it to an integer and store in vertical to set y axis move direction
         vertical = (int) Input.GetAxisRaw("Vertical");
 
-        //Check if moving horizontally, if so set vertical to zero.
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (direction != KeyCode.LeftArrow && Input.GetKey(KeyCode.LeftArrow))
         {
+            direction = KeyCode.LeftArrow;
             animator.SetTrigger("playerWalkLeft");
             vertical = 0;
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (direction != KeyCode.RightArrow && Input.GetKey(KeyCode.RightArrow))
         {
+            direction = KeyCode.RightArrow;
             animator.SetTrigger("playerWalkRight");
             vertical = 0;
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (direction != KeyCode.DownArrow && Input.GetKey(KeyCode.DownArrow))
         {
+            direction = KeyCode.DownArrow;
             animator.SetTrigger("playerWalkForward");
             horizontal = 0;
         }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        else if (direction != KeyCode.UpArrow && Input.GetKey(KeyCode.UpArrow))
         {
+            direction = KeyCode.UpArrow;
             animator.SetTrigger("playerWalkBackward");
             horizontal = 0;
         }
+        else
+        {
+            direction = KeyCode.None;
+        }
 
-        //Check if we have a non-zero value for horizontal or vertical
         if (horizontal != 0 || vertical != 0)
         {
-            //Call AttemptMove passing in the generic parameter Wall, since that is what Player may interact with if they encounter one (by attacking it)
-            //Pass in horizontal and vertical as parameters to specify the direction to move Player in.
             AttemptMove<Enemy>(horizontal, vertical);
         }
     }
