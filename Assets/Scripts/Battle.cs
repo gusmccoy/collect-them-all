@@ -15,6 +15,8 @@ public class Battle : MonoBehaviour
     public Text fightOverText;
     public AudioSource BattleTheme;
     public AudioSource NewCreatureCapture;
+    public Button fightBtn;
+    public Button runBtn;
 
     private float allyHealth = 3.0f;
     private float allyDamage = 1.0f;
@@ -22,6 +24,9 @@ public class Battle : MonoBehaviour
 
     void Start()
     {
+        fightBtn.onClick.AddListener(() => AttackEnemy());
+        runBtn.onClick.AddListener(() => RunFromBattle());
+
         for (int x = 0; x < 10; x++)
         {
             if (SaveState.capturedCreatures[x])
@@ -40,7 +45,6 @@ public class Battle : MonoBehaviour
         enemyText.text = "HP: " + enemyHealth;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (editHealthText)
@@ -48,24 +52,9 @@ public class Battle : MonoBehaviour
             allyText.text = "HP: " + allyHealth;
             enemyText.text = "HP: " + enemyHealth;
 
-            if (yourTurn)
-            {
-                if (Input.GetKeyDown(KeyCode.F))
-                {
-                    editHealthText = false;
-
-                    StartCoroutine(DamageEnemy());
-                }
-
-                if (Input.GetKeyDown(KeyCode.R))
-                {
-                    SceneManager.LoadScene("SampleScene");
-                }
-            }
-            else
+            if (!yourTurn)
             {
                 editHealthText = false;
-
                 StartCoroutine(DamageAlly());
             }
 
@@ -161,6 +150,33 @@ public class Battle : MonoBehaviour
             {
                 SceneManager.LoadScene("SampleScene");
             }
+        }
+    }
+
+    public void AttackEnemy()
+    {
+        if (yourTurn)
+        {
+            editHealthText = false;
+            StartCoroutine(DamageEnemy());
+        }
+        if (enemyHealth <= 0)
+        {
+            BattleTheme.Stop();
+            StartCoroutine(FightOver());
+        }
+        else if (allyHealth <= 0)
+        {
+            BattleTheme.Stop();
+            StartCoroutine(FightOver());
+        }
+    }
+
+    public void RunFromBattle()
+    {
+        if (yourTurn)
+        {
+            SceneManager.LoadScene("SampleScene");
         }
     }
 }
