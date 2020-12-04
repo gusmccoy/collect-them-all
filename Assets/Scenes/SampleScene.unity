@@ -25192,6 +25192,10 @@ PrefabInstance:
       propertyPath: blockingLayer.m_Bits
       value: 256
       objectReference: {fileID: 0}
+    - target: {fileID: 2844484099028890617, guid: 17e17748db137ea4da88b4fa29561452, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17e17748db137ea4da88b4fa29561452, type: 3}
 --- !u!4 &2079765446 stripped
