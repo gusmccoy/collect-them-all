@@ -182,9 +182,14 @@ public class Battle : MonoBehaviour
             fightOverText.color = Color.red;
             DefeatedMusic.Play();
             gotToLog = false;
+            SaveState.allyID = 1;
+            SaveState.playerCoordinateX = 0;
+            SaveState.playerCoordinateY = 0;
+            SaveState.inTown = true;
+            SaveState.capturedCreatures = new bool[10];
             yield return new WaitForSeconds(3);
             fightOverText.text = "You lost the fight, retreat!";
-            SceneManager.LoadScene("MainScene");
+            SceneManager.LoadScene("TitleScreen");
         }
         else
         {
