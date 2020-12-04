@@ -11,6 +11,7 @@ TagManager:
   - StartBtn
   - DangerArea
   - CityGate
+  - Oak
   layers:
   - Default
   - TransparentFX

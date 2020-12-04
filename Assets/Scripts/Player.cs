@@ -12,6 +12,7 @@ public class Player : MovingObject
     public int enemyDamage = 1;
     public Text foodText;
     public Text scoreText;
+    public Text oakMessageText;
     public AudioSource CityMusic;
     public AudioSource WildernessMusic;
 
@@ -174,6 +175,30 @@ public class Player : MovingObject
                 WildernessMusic.Play();
             }
         }
+        if( other.tag == "Oak")
+        {
+            int monstersCollected = 0;
+            for(int i = 0; i < 10; i++)
+            {
+                if (SaveState.capturedCreatures[i])
+                    monstersCollected++;
+            }
+
+            if(monstersCollected >= 5)
+            {
+                oakMessageText.text = "Thank you so much for your contribution! You win!";
+            }
+            else
+            {
+                oakMessageText.text = "Goodness! You seemed to have jumped the gun! You still need " + (5 - monstersCollected) + " before you've completed your task!";
+                Invoke("deactiveText", 3.0f);
+            }
+        }
+    }
+
+    private void deactiveText()
+    {
+        oakMessageText.text = "";
     }
 
 
