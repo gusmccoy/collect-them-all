@@ -179,7 +179,7 @@ public class Battle : MonoBehaviour
         {
             fightOverText.color = Color.red;
             fightOverText.text = "You lost the fight, reatreat!";
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("MainScene");
         }
         else
         {
@@ -195,7 +195,7 @@ public class Battle : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene("SampleScene");
+                SceneManager.LoadScene("MainScene");
             }
         }
     }
@@ -223,7 +223,7 @@ public class Battle : MonoBehaviour
     {
         if (yourTurn)
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("MainScene");
         }
     }
 }
