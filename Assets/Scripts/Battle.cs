@@ -41,6 +41,57 @@ public class Battle : MonoBehaviour
         allyDamage += bonusDamage;
         allyHealth += bonusHealth;
 
+        if (SaveState.enemyID == 0)
+        {
+            enemyHealth = 8.0f;
+            enemyDamage = 4.0f;
+        }
+        else if (SaveState.enemyID == 1)
+        {
+            enemyHealth = 10.0f;
+            enemyDamage = 5.0f;
+        }
+        else if (SaveState.enemyID == 2)
+        {
+            enemyHealth = 2.0f;
+            enemyDamage = 1.0f;
+        }
+        else if (SaveState.enemyID == 3)
+        {
+            enemyHealth = 6.0f;
+            enemyDamage = 2.0f;
+        }
+        else if (SaveState.enemyID == 4)
+        {
+            enemyHealth = 4.0f;
+            enemyDamage = 3.0f;
+        }
+        else if (SaveState.enemyID == 5)
+        {
+            enemyHealth = 3.0f;
+            enemyDamage = 1.5f;
+        }
+        else if (SaveState.enemyID == 6)
+        {
+            enemyHealth = 3.0f;
+            enemyDamage = 2.0f;
+        }
+        else if (SaveState.enemyID == 7)
+        {
+            enemyHealth = 12.0f;
+            enemyDamage = 5.5f;
+        }
+        else if (SaveState.enemyID == 8)
+        {
+            enemyHealth = 5.0f;
+            enemyDamage = 1.0f;
+        }
+        else
+        {
+            enemyHealth = 1.0f;
+            enemyDamage = 0.5f;
+        }
+
         allyText.text = "HP: " + allyHealth;
         enemyText.text = "HP: " + enemyHealth;
     }
