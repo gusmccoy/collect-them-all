@@ -20,7 +20,6 @@ public class Player : MonoBehaviour
 
     public float speed = 5.0f;
 
-    [HideInInspector] public static int score;
 
     private Animator animator;
     private KeyCode direction = KeyCode.None;
@@ -109,12 +108,6 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //Check if the tag of the trigger collided with is Exit.
-        if (other.tag == "Exit")
-        {
-            //Invoke the Restart function to start the next level with a delay of restartLevelDelay (default 1 second).
-            Invoke("endGame", restartLevelDelay);
-        }
         if (other.tag == "DangerArea")
         {
             var rand = new System.Random();
