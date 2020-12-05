@@ -2099,6 +2099,8 @@ MonoBehaviour:
   runBtn: {fileID: 1276886623}
   allySlider: {fileID: 1105330793}
   enemySlider: {fileID: 1680732289}
+  allyHealthImage: {fileID: 1604665772}
+  enemyHealthImage: {fileID: 2010090598}
 --- !u!82 &1979693188
 AudioSource:
   m_ObjectHideFlags: 0

@@ -18,6 +18,8 @@ public class Battle : MonoBehaviour
     public Button runBtn;
     public Slider allySlider;
     public Slider enemySlider;
+    public Image allyHealthImage;
+    public Image enemyHealthImage;
 
     private float allyHealth = 3.0f;
     private float allyMaxHealth;
@@ -156,6 +158,15 @@ public class Battle : MonoBehaviour
             allySlider.value = 0f;
         }
 
+        if (allySlider.value > 0.25 && allySlider.value <= 0.5)
+        {
+            allyHealthImage.color = Color.yellow;
+        }
+        else if (allySlider.value <= 0.25)
+        {
+            allyHealthImage.color = Color.red;
+        }
+
         if (allyHealth > 0)
         {
             allyText.text = allyText.text + "  -" + enemyDamage;
@@ -191,6 +202,15 @@ public class Battle : MonoBehaviour
         else
         {
             enemySlider.value = 0f;
+        }
+
+        if (enemySlider.value > 0.25 && enemySlider.value <= 0.5)
+        {
+            enemyHealthImage.color = Color.yellow;
+        }
+        else if (enemySlider.value <= 0.25)
+        {
+            enemyHealthImage.color = Color.red;
         }
 
         if (enemyHealth > 0)
