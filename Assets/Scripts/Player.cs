@@ -25,7 +25,6 @@ public class Player : MonoBehaviour
     public float cityBorderCoordinateY = 21.0f;
     public int battleChance = 4;
     private Animator animator;
-    private KeyCode direction = KeyCode.None;
 
 
     public void Start()
@@ -59,37 +58,32 @@ public class Player : MonoBehaviour
         int horizontal = (int)Input.GetAxisRaw("Horizontal");
         int vertical = (int)Input.GetAxisRaw("Vertical");
 
-        if (direction != KeyCode.LeftArrow && Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
-            direction = KeyCode.LeftArrow;
             animator.SetTrigger("playerWalkLeft");
             vertical = 0;
         }
-        else if (direction != KeyCode.RightArrow && Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow))
         {
-            direction = KeyCode.RightArrow;
             animator.SetTrigger("playerWalkRight");
             vertical = 0;
         }
-        else if (direction != KeyCode.DownArrow && Input.GetKey(KeyCode.DownArrow))
+        else if (Input.GetKey(KeyCode.DownArrow))
         {
-            direction = KeyCode.DownArrow;
             animator.SetTrigger("playerWalkForward");
             horizontal = 0;
         }
-        else if (direction != KeyCode.UpArrow && Input.GetKey(KeyCode.UpArrow))
+        else if (Input.GetKey(KeyCode.UpArrow))
         {
-            direction = KeyCode.UpArrow;
             animator.SetTrigger("playerWalkBackward");
             horizontal = 0;
         }
         else
         {
-            direction = KeyCode.None;
             horizontal = vertical = 0;
         }
 
-        if (horizontal != 0 || vertical != 0)
+        if (horizontal != 0|| vertical != 0)
         {
             AttemptMove(horizontal, vertical);
         }
@@ -103,7 +97,12 @@ public class Player : MonoBehaviour
 
         if (hit.transform == null)
         {
-            var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+            Vector3 move;
+            if (Input.GetAxis("Horizontal") != 0)
+                move = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
+            else
+                move = new Vector3(0, Input.GetAxis("Vertical"), 0);
+         
             transform.position += move * speed * Time.deltaTime;
             Camera.transform.position = transform.position + new Vector3(3.5f, 1f, -10f);
         }
