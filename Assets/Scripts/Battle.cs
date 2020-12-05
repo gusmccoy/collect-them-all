@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class Battle : MonoBehaviour
 {
-    public float enemyHealth = 3.0f;
-    public float enemyDamage = 0.5f;
     public bool yourTurn = true;
     public bool editHealthText = true;
     public Text allyText;
@@ -18,16 +16,29 @@ public class Battle : MonoBehaviour
     public AudioSource DefeatedMusic;
     public Button fightBtn;
     public Button runBtn;
+    public Slider allySlider;
+    public Slider enemySlider;
 
     private float allyHealth = 3.0f;
+    private float allyMaxHealth;
     private float allyDamage = 1.0f;
+    private float enemyHealth;
+    private float enemyMaxHealth;
+    private float enemyDamage;
     private int monstersCollected;
     private bool gotToLog = false;
+    private float allyHealthProgressNumber;
+    private float enemyHealthProgressNumber;
 
     void Start()
     {
         fightBtn.onClick.AddListener(() => AttackEnemy());
         runBtn.onClick.AddListener(() => RunFromBattle());
+
+        allyHealthProgressNumber = 1.0f;
+        enemyHealthProgressNumber = 1.0f;
+        allySlider.value = allyHealthProgressNumber;
+        enemySlider.value = enemyHealthProgressNumber;
 
         for (int x = 0; x < 10; x++)
         {
@@ -42,6 +53,7 @@ public class Battle : MonoBehaviour
 
         allyDamage += bonusDamage;
         allyHealth += bonusHealth;
+        allyMaxHealth = allyHealth;
 
         if (SaveState.enemyID == 0)
         {
@@ -94,6 +106,8 @@ public class Battle : MonoBehaviour
             enemyDamage = 0.5f;
         }
 
+        enemyMaxHealth = enemyHealth;
+
         allyText.text = "HP: " + allyHealth;
         enemyText.text = "HP: " + enemyHealth;
     }
@@ -131,6 +145,16 @@ public class Battle : MonoBehaviour
     IEnumerator DamageAlly()
     {
         allyHealth -= enemyDamage;
+        allyHealthProgressNumber = allyHealth / allyMaxHealth;
+
+        if (allyHealthProgressNumber >= 0)
+        {
+            allySlider.value = allyHealthProgressNumber;
+        }
+        else
+        {
+            allySlider.value = 0f;
+        }
 
         if (allyHealth > 0)
         {
@@ -158,6 +182,16 @@ public class Battle : MonoBehaviour
     IEnumerator DamageEnemy()
     {
         enemyHealth -= allyDamage;
+        enemyHealthProgressNumber = enemyHealth / enemyMaxHealth;
+
+        if (enemyHealthProgressNumber >= 0)
+        {
+            enemySlider.value = enemyHealthProgressNumber;
+        }
+        else
+        {
+            enemySlider.value = 0f;
+        }
 
         if (enemyHealth > 0)
         {
