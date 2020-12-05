@@ -7,12 +7,8 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public LayerMask blockingLayer;
-
-    public float moveTime = 0.1f;
     private BoxCollider2D boxCollider;
-
     public GameObject Camera;
-    public float restartLevelDelay = 1f;
     public Text oakMessageText;
     public GameObject messageImage;
     public AudioSource CityMusic;
@@ -20,8 +16,14 @@ public class Player : MonoBehaviour
     public AudioSource BeatGameMusic;
 
     public float speed = 5.0f;
-
-
+    public int minimumMonsters = 5;
+    public int maxMonsters = 10;
+    public float enterBattleDelay = 1f;
+    public float endGameDelay = 4.0f;
+    public float deactivateOakMessageDelay = 3.0f;
+    public float moveTime = 0.1f;
+    public float cityBorderCoordinateY = 21.0f;
+    public int battleChance = 4;
     private Animator animator;
     private KeyCode direction = KeyCode.None;
 
@@ -113,16 +115,15 @@ public class Player : MonoBehaviour
         {
             TimeSpan t = (DateTime.UtcNow - new DateTime(1970, 1, 1));
             var rand = new System.Random(t.Seconds);
-            int chance = rand.Next(4);
-            // ONE IN FOUR CHANCE OF A BATTLE
+            int chance = rand.Next(battleChance);
             if(chance == 1)
             {
-                Invoke("enterBattleScene", restartLevelDelay);
+                Invoke("enterBattleScene", enterBattleDelay);
             }
         }
         if (other.tag == "CityGate")
         {
-            if(transform.position.y <= 21.0f)
+            if(transform.position.y <= cityBorderCoordinateY)
             {
                 WildernessMusic.Stop();
                 CityMusic.Play();
@@ -137,25 +138,25 @@ public class Player : MonoBehaviour
         {
             int monstersCollected = 0;
 
-            for(int i = 0; i < 10; i++)
+            for(int i = 0; i < maxMonsters; i++)
             {
                 if (SaveState.capturedCreatures[i])
                     monstersCollected++;
             }
 
-            if(monstersCollected >= 5)
+            if(monstersCollected >= minimumMonsters)
             {
                 oakMessageText.text = "You collected " + monstersCollected + " monsters. Thank you so much for your contribution! You win!";
                 messageImage.SetActive(true);
                 CityMusic.Stop();
                 BeatGameMusic.Play();
-                Invoke("endGame", 3.5f);
+                Invoke("endGame", endGameDelay);
             }
             else
             {
-                oakMessageText.text = "Goodness! You seemed to have jumped the gun! You still need " + (5 - monstersCollected) + " more monsters before you've completed your task!";
+                oakMessageText.text = "Goodness! You seemed to have jumped the gun! You still need " + (minimumMonsters - monstersCollected) + " more monsters before you've completed your task!";
                 messageImage.SetActive(true);
-                Invoke("deactiveText", 3.0f);
+                Invoke("deactiveText", deactivateOakMessageDelay);
             }
         }
     }
@@ -172,15 +173,16 @@ public class Player : MonoBehaviour
         SaveState.playerCoordinateX = 0;
         SaveState.playerCoordinateY = 0;
         SaveState.inTown = true;
-        SaveState.capturedCreatures = new bool[10];
+        SaveState.capturedCreatures = new bool[maxMonsters];
         SceneManager.LoadScene("TitleScreen");
     }
 
     private void enterBattleScene()
     {
-        var rand = new System.Random();
+        TimeSpan t = (DateTime.UtcNow - new DateTime(1970, 1, 1));
+        var rand = new System.Random(t.Seconds);
         SaveState.allyID = 1;
-        SaveState.enemyID = rand.Next(10);
+        SaveState.enemyID = rand.Next(maxMonsters);
         SaveState.playerCoordinateX = transform.position.x;
         SaveState.playerCoordinateY = transform.position.y;
         SaveState.inTown = false;
@@ -194,7 +196,6 @@ public class Player : MonoBehaviour
 
         boxCollider.enabled = false;
 
-        //Cast a line from start point to end point checking collision on blockingLayer.
         hit = Physics2D.Linecast(start, end, blockingLayer);
 
         boxCollider.enabled = true;
