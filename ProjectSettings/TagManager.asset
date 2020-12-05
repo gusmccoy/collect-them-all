@@ -12,6 +12,7 @@ TagManager:
   - DangerArea
   - CityGate
   - Oak
+  - Pond
   layers:
   - Default
   - TransparentFX

@@ -16586,9 +16586,9 @@ GameObject:
   - component: {fileID: 1383287942}
   - component: {fileID: 1383287943}
   - component: {fileID: 1383287944}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: CityPond
-  m_TagString: Untagged
+  m_TagString: Pond
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16668,10 +16668,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.00000047683716}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -16682,7 +16682,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.08, y: 0.67}
+  m_Size: {x: 2.08, y: 0.6699991}
   m_EdgeRadius: 0
 --- !u!4 &1386359496 stripped
 Transform:

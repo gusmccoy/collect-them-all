@@ -117,6 +117,13 @@ public class Player : MonoBehaviour
             int chance = rand.Next(battleChance);
             if(chance == 1)
             {
+                t = (DateTime.UtcNow - new DateTime(1970, 1, 1));
+                rand = new System.Random(t.Seconds);
+                SaveState.allyID = 1;
+                SaveState.enemyID = rand.Next(maxMonsters);
+                SaveState.playerCoordinateX = transform.position.x;
+                SaveState.playerCoordinateY = transform.position.y;
+                SaveState.inTown = false;
                 Invoke("enterBattleScene", enterBattleDelay);
             }
         }
@@ -132,6 +139,26 @@ public class Player : MonoBehaviour
                 CityMusic.Stop();
                 WildernessMusic.Play();
             }
+        }
+        if(other.tag == "Pond")
+        {
+            animator.SetTrigger("playerFish");
+            TimeSpan t = (DateTime.UtcNow - new DateTime(1970, 1, 1));
+            var rand = new System.Random(t.Seconds);
+
+            SaveState.allyID = 1;
+
+            int result = rand.Next(maxMonsters);
+            while (result % 3 != 0)
+            {
+                result = rand.Next(maxMonsters);
+            }
+
+            SaveState.enemyID = result;
+            SaveState.playerCoordinateX = transform.position.x;
+            SaveState.playerCoordinateY = transform.position.y - .75f;
+            SaveState.inTown = true;
+            Invoke("enterBattleScene", enterBattleDelay);
         }
         if( other.tag == "Oak")
         {
@@ -178,13 +205,7 @@ public class Player : MonoBehaviour
 
     private void enterBattleScene()
     {
-        TimeSpan t = (DateTime.UtcNow - new DateTime(1970, 1, 1));
-        var rand = new System.Random(t.Seconds);
-        SaveState.allyID = 1;
-        SaveState.enemyID = rand.Next(maxMonsters);
-        SaveState.playerCoordinateX = transform.position.x;
-        SaveState.playerCoordinateY = transform.position.y;
-        SaveState.inTown = false;
+
         SceneManager.LoadScene("BattleScene");
     }
 
