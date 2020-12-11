@@ -272,6 +272,7 @@ public class Battle : MonoBehaviour
             SaveState.capturedCreatures = new bool[10];
             yield return new WaitForSeconds(3);
             fightOverText.text = "You lost the fight, retreat!";
+            yield return new WaitForSeconds(3);
             SceneManager.LoadScene("TitleScreen");
         }
     }
