@@ -117,8 +117,7 @@ public class Player : MonoBehaviour
             int chance = rand.Next(battleChance);
             if(chance == 1)
             {
-                t = (DateTime.UtcNow - new DateTime(1970, 1, 1));
-                rand = new System.Random(t.Seconds);
+                rand = new System.Random();
                 SaveState.allyID = 1;
                 SaveState.enemyID = rand.Next(maxMonsters);
                 SaveState.playerCoordinateX = transform.position.x;

@@ -145,17 +145,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346f96a023600674f999abe9bf657cd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveTime: 0.02
   blockingLayer:
     serializedVersion: 2
     m_Bits: 256
   Camera: {fileID: 0}
-  restartLevelDelay: 1
-  enemyDamage: 1
-  foodText: {fileID: 0}
-  scoreText: {fileID: 0}
+  oakMessageText: {fileID: 0}
+  messageImage: {fileID: 0}
   CityMusic: {fileID: 0}
   WildernessMusic: {fileID: 0}
+  BeatGameMusic: {fileID: 0}
+  speed: 5
+  minimumMonsters: 5
+  maxMonsters: 10
+  enterBattleDelay: 1
+  endGameDelay: 4
+  deactivateOakMessageDelay: 3
+  moveTime: 0.02
+  cityBorderCoordinateY: 21
+  battleChance: 4
 --- !u!95 &2594382573093287295
 Animator:
   serializedVersion: 3
